@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 200px auto;
+        }
+        .box > div::before {
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 15px 1px;
+            background-color: orange;
+        }
+      .box > div {
+          position: absolute;
+          
+         
+          width: 100px;
+          height: 100px;
+          background-color: lightpink;
+          border-radius: 80px 0px;
+          transition: all 2s;
+          transform-origin: right top;
+         
+      }
+      .box>div:nth-child(1){
+          /* transform: translate(300px , 400px) rotate(360deg); */
+          transform: translate(200px, 100px) rotate(360deg)
+      }
+      .box>div:nth-child(2) {
+          transform:translate(-200px, -100px) rotate(288deg)
+      }                                                           
+      .box>div:nth-child(3) {
+        transform: translate(150px, -100px) rotate(216deg)
+      }
+      .box>div:nth-child(4) {
+        transform: translate(-300px, 50px) rotate(144deg)
+      }
+      .box>div:nth-child(5) {
+        transform: translate(-350px, 100px) rotate(72deg)
+      }
+      .box:hover >div:nth-child(1){
+          transform:rotate(360deg);
+      }
+      .box:hover >div:nth-child(2){
+          transform:rotate(288deg);
+      }
+      .box:hover >div:nth-child(3){
+          transform:rotate(216deg);
+      }
+      .box:hover >div:nth-child(4){
+          transform:rotate(144deg);
+      }
+      .box:hover >div:nth-child(5){
+          transform:rotate(72deg);
+      }
+
+     
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    
+    </div>
+
+   
+</body>
+</html>
